@@ -1,0 +1,132 @@
+:root {
+    --font-size-small: 14px;
+    --font-size-medium: 20px;
+    --font-size-large: 24px;
+    --font-size-title: 32px;
+    --font-size-heading: 50px;
+    --line-height-base: 1.6;
+    --primary-color: #e7dbf5; /* Cor de fundo padrão */
+    --secondary-color: #f2f2f2; /* Cor de fundo para blocos específicos */
+    --highlight-color: rgb(98, 12, 191); /* Cor de destaque */
+    --button-color: #4caf50; /* Cor do botão */
+    --button-hover: #45a049; /* Cor ao passar o mouse */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilo base para seção Sobre */
+.container-sobre {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 20px;
+    height: 80vh;
+    background-color: var(--primary-color);
+}
+
+.img-sobre img {
+    width: 60%;
+    height: auto;
+    border-radius: 180px;
+    padding: 60px;
+    animation: rotateBackAndForth 3s ease-in-out infinite;
+}
+
+.test-sobre {
+    text-align: right;
+    width: 50%;
+    margin-left: 100px;
+    font-size: var(--font-size-large);
+    line-height: var(--line-height-base);
+    padding: 60px;
+}
+
+.test-sobre h1 {
+    margin-bottom: 20px;
+    color: var(--highlight-color);
+    font-size: var(--font-size-heading);
+    font-weight: bold;
+}
+
+/* Animação */
+@keyframes rotateBackAndForth {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    75% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Media Queries para tablets */
+@media (max-width: 768px) {
+    .container-sobre {
+        flex-direction: column;
+        justify-content: center; /* Centraliza verticalmente */
+        align-items: center; /* Centraliza horizontalmente */
+        gap: 30px;
+        height: auto; /* Ajusta altura para evitar problemas */
+        padding: 20px;
+    }
+
+    .img-sobre img {
+        width: 70%; /* Ajusta largura */
+        padding: 20px; /* Ajusta espaçamento */
+        border-radius: 150px; /* Bordas menores */
+    }
+
+    .test-sobre {
+        text-align: center; /* Centraliza texto */
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .test-sobre h1 {
+        font-size: calc(
+            var(--font-size-heading) - 10px
+        ); /* Reduz tamanho do título */
+    }
+}
+
+/* Media Queries para celulares */
+@media (max-width: 480px) {
+    .container-sobre {
+        flex-direction: column;
+        justify-content: center; /* Centraliza verticalmente */
+        align-items: center; /* Centraliza horizontalmente */
+        gap: 20px;
+        height: 100vh; /* Usa 100vh para centralizar na tela do celular */
+        padding: 10px;
+    }
+
+    .img-sobre img {
+        width: 90%; /* Ajusta largura */
+        padding: 10px;
+        margin: 0 auto; /* Centraliza horizontalmente */
+        display: block;
+    }
+
+    .test-sobre {
+        text-align: center;
+        width: 100%; /* Garante que o texto ocupe toda a largura */
+        font-size: var(--font-size-medium); /* Ajusta tamanho do texto */
+        padding: 10px;
+    }
+
+    .test-sobre h1 {
+        font-size: calc(
+            var(--font-size-heading) - 20px
+        ); /* Reduz tamanho do título */
+    }
+
+    .test-sobre p {
+        font-size: var(--font-size-small); /* Ajusta tamanho do parágrafo */
+    }
+}

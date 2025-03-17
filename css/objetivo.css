@@ -1,0 +1,120 @@
+:root {
+    --font-size-small: 14px;
+    --font-size-medium: 20px;
+    --font-size-large: 24px;
+    --font-size-title: 32px;
+    --font-size-heading: 50px;
+    --line-height-base: 1.6;
+    --primary-color: #e7dbf5; /* Cor de fundo padrão */
+    --secondary-color: #f2f2f2; /* Cor de fundo para blocos específicos */
+    --highlight-color: rgb(98, 12, 191); /* Cor de destaque */
+    --button-color: #4caf50; /* Cor do botão */
+    --button-hover: #45a049; /* Cor ao passar o mouse */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Seção Objetivos */
+#objetivos-projeto {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.container-objetivos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.objetivos-texto {
+    width: 50%;
+    padding: 80px;
+}
+
+.objetivos-texto h1 {
+    font-size: var(--font-size-heading);
+    font-weight: bold;
+    color: var(--highlight-color);
+    margin-bottom: 15px;
+}
+
+.objetivos-texto ul {
+    list-style: none;
+    padding: 0;
+}
+
+.objetivos-texto ul li {
+    font-size: var(--font-size-medium);
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.objetivos-texto ul li::before {
+    content: "✔️";
+    margin-right: 8px;
+    color: var(--button-color);
+}
+
+.objetivos-imagem {
+    width: 40%;
+    text-align: center;
+}
+
+.objetivos-imagem img {
+    width: 80%;
+    height: auto;
+    border-radius: 100px;
+}
+
+/* Media Queries para tablets */
+@media (max-width: 768px) {
+    .container-objetivos {
+        flex-direction: column; /* Coloca os elementos um embaixo do outro */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .objetivos-texto {
+        width: 100%; /* Ocupa toda a largura no modo responsivo */
+        padding: 40px; /* Reduz o padding para tablets */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .objetivos-imagem {
+        width: 100%; /* Ajusta a largura da imagem */
+    }
+
+    .objetivos-imagem img {
+        width: 70%; /* Reduz o tamanho da imagem em tablets */
+    }
+
+    .objetivos-texto h1 {
+        font-size: calc(
+            var(--font-size-heading) - 10px
+        ); /* Reduz tamanho do título */
+    }
+}
+
+/* Media Queries para celulares */
+@media (max-width: 480px) {
+    .objetivos-texto {
+        font-size: var(--font-size-medium);
+        padding: 20px; /* Reduz o padding ainda mais para dispositivos menores */
+    }
+
+    .objetivos-imagem img {
+        width: 80%; /* Ajusta a largura da imagem para caber melhor */
+    }
+
+    .objetivos-texto h1 {
+        font-size: calc(
+            var(--font-size-heading) - 15px
+        ); /* Texto menor para celulares */
+    }
+
+    .objetivos-texto ul li {
+        font-size: var(
+            --font-size-small
+        ); /* Ajusta o tamanho do texto das listas */
+    }
+}

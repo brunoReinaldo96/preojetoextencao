@@ -1,0 +1,109 @@
+:root {
+    --font-size-small: 14px;
+    --font-size-medium: 20px;
+    --font-size-large: 24px;
+    --font-size-title: 32px;
+    --font-size-heading: 50px;
+    --line-height-base: 1.6;
+    --primary-color: #e7dbf5; /* Cor de fundo padrão */
+    --secondary-color: #f2f2f2; /* Cor de fundo para blocos específicos */
+    --highlight-color: rgb(98, 12, 191); /* Cor de destaque */
+    --button-color: #4caf50; /* Cor do botão */
+    --button-hover: #45a049; /* Cor ao passar o mouse */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Seção Local de Funcionamento */
+#local-funcionamento {
+    background-color: var(--primary-color);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.container-local {
+    display: flex; /* Organiza os elementos em uma linha horizontal */
+    flex-direction: row; /* Alinha as imagens e o texto lado a lado */
+    align-items: center; /* Centraliza verticalmente os itens */
+    gap: 20px; /* Espaçamento entre imagens e texto */
+}
+
+.local-imagem {
+    display: flex; /* Configura o container como um Flexbox */
+    flex-direction: column; /* Alinha os itens em coluna (verticalmente) */
+    gap: 20px; /* Espaçamento entre as imagens */
+    align-items: center; /* Opcional: centraliza as imagens horizontalmente */
+}
+
+.local-img {
+    width: 50%; /* As imagens ocuparão toda a largura do container */
+    max-width: 400px; /* Define uma largura máxima */
+    height: auto; /* Mantém as proporções das imagens */
+    border-radius: 10px; /* Aplica bordas arredondadas */
+    box-shadow: 0 4px 8px var(--shadow-color); /* Adiciona uma sombra */
+}
+
+.texto-local {
+    flex: 1; /* Faz o texto ocupar o espaço restante */
+    text-align: left; /* Alinha o texto à esquerda */
+    padding: 20px; /* Adiciona espaçamento interno */
+    box-sizing: border-box; /* Inclui o padding na largura total */
+}
+
+.texto-local h1 {
+    font-size: var(--font-size-heading);
+    font-weight: bold;
+    color: var(--highlight-color);
+    margin-bottom: 20px;
+}
+
+.texto-local p {
+    font-size: var(--font-size-medium);
+    line-height: var(--line-height-base);
+    margin-bottom: 20px;
+}
+
+.botao-maps {
+    display: inline-block;
+    background-color: var(--button-color);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: var(--font-size-medium);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.botao-maps:hover {
+    background-color: var(--button-hover);
+}
+
+/* Media Queries para tablets */
+@media (max-width: 768px) {
+    .container-local {
+        flex-direction: column; /* Empilha os elementos verticalmente */
+    }
+
+    .local-img {
+        width: 80%; /* Ajuste para tablets */
+    }
+}
+
+/* Media Queries para celulares */
+@media (max-width: 480px) {
+    .local-img {
+        width: 100%; /* Ajuste para ocupar toda a largura */
+    }
+
+    .texto-local h1 {
+        font-size: calc(
+            var(--font-size-heading) - 4px
+        ); /* Reduz levemente o tamanho do texto */
+    }
+
+    .texto-local p {
+        font-size: calc(
+            var(--font-size-medium) - 2px
+        ); /* Reduz tamanho do parágrafo */
+    }
+}

@@ -1,0 +1,53 @@
+:root {
+    --font-size-small: 14px;
+    --font-size-medium: 18px;
+    --font-size-large: 24px;
+    --font-size-title: 32px;
+    --font-size-heading: 50px;
+    --line-height-base: 1.6;
+    --primary-color: #e7dbf5; /* Cor de fundo padrão */
+    --secondary-color: #f2f2f2; /* Cor de fundo para blocos específicos */
+    --highlight-color: rgb(98, 12, 191); /* Cor de destaque */
+    --button-color: #4caf50; /* Cor do botão */
+    --button-hover: #45a049; /* Cor ao passar o mouse */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra */
+}
+/* Capa */
+.capa {
+    width: 50%;
+    height: auto;
+}
+
+/* Carrossel */
+.carousel {
+    width: 98%;
+    height: auto;
+    padding: 50px;
+    display: block;
+    margin: auto;
+}
+
+.carousel-inner img {
+    width: 100%; /* Garante que a imagem ocupe toda a largura */
+    height: 1000px; /* Altura fixa */
+    object-fit: contain; /* Mantém proporção */
+    background-color: #ffffff;
+}
+
+/* Botões de controle do carrossel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--highlight-color);
+    border-radius: 50%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    filter: brightness(0.7); /* Escurece o botão */
+    transition: transform var(--transition-duration) ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    transform: scale(1.2); /* Ampliado */
+}

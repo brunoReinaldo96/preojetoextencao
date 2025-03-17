@@ -1,0 +1,47 @@
+:root {
+    --font-size-small: 14px;
+    --font-size-medium: 18px;
+    --font-size-large: 24px;
+    --font-size-title: 32px;
+    --font-size-heading: 50px;
+    --line-height-base: 1.6;
+    --primary-color: #e7dbf5; /* Cor de fundo padrão */
+    --secondary-color: #f2f2f2; /* Cor de fundo para blocos específicos */
+    --highlight-color: rgb(98, 12, 191); /* Cor de destaque */
+    --button-color: #4caf50; /* Cor do botão */
+    --button-hover: #45a049; /* Cor ao passar o mouse */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra */
+}
+#impacto-comunidade {
+    background-color: var(--primary-color);
+    background-image: url("img/"); /* Adicione o caminho para a imagem */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 1;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.container-impacto {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    font-family: Arial, sans-serif;
+    color: #333; /* Mantém a cor do texto */
+}
+
+.container-impacto h1 {
+    font-size: var(--font-size-heading);
+    font-weight: bold;
+    color: var(--highlight-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container-impacto p {
+    font-size: var(--font-size-medium);
+    line-height: var(--line-height-base);
+    margin-bottom: 20px;
+}
