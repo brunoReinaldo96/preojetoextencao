@@ -29,7 +29,7 @@
 
 .carousel-inner img {
     width: 100%; /* Garante que a imagem ocupe toda a largura */
-    height: 1000px; /* Altura fixa */
+    height: auto; /* Altura fixa */
     object-fit: contain; /* Mantém proporção */
     background-color: #ffffff;
 }
@@ -50,4 +50,52 @@
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
     transform: scale(1.2); /* Ampliado */
+}
+
+@media (max-width: 1024px) {
+    /* Tablets */
+    .capa {
+        width: 100%;
+    }
+    .carousel-inner img {
+        width: 90%;
+        height: auto; /* Reduz altura */
+    }
+    .carousel {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Smartphones */
+    .capa {
+        width: 100%;
+    }
+
+    .carousel {
+        width: 80%; /* Largura padrão */
+        height: 60vh; /* Altura relativa à tela do dispositivo */
+        margin: auto; /* Centraliza o carrossel */
+        overflow: hidden; /* Garante que o conteúdo extra seja cortado */
+    }
+
+    .carousel-inner {
+        display: flex; /* Ativa flexbox */
+        align-items: center; /* Alinha verticalmente */
+        height: 100%; /* Garante que todo o espaço seja usado */
+    }
+
+    .carousel-inner img {
+        max-width: 100%; /* Garante que a largura máxima respeite o contêiner */
+        max-height: 100%; /* Garante que a altura máxima respeite o contêiner */
+        object-fit: contain; /* Mantém a imagem completa dentro do carrossel */
+        margin: auto; /* Centraliza horizontalmente */
+        display: flex;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 30px; /* Ícones menores */
+        height: 30px;
+    }
 }
