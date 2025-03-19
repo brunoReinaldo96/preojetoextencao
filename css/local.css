@@ -17,38 +17,41 @@
 #local-funcionamento {
     background-color: var(--primary-color);
     padding: 40px;
-    border-radius: 10px;
 }
 
 .container-local {
     display: flex; /* Organiza os elementos em uma linha horizontal */
     flex-direction: row; /* Alinha as imagens e o texto lado a lado */
     align-items: center; /* Centraliza verticalmente os itens */
+    justify-content: space-between; /* Distribui o espaço uniformemente */
     gap: 20px; /* Espaçamento entre imagens e texto */
 }
 
+/* Imagens */
 .local-imagem {
-    display: flex; /* Configura o container como um Flexbox */
-    flex-direction: column; /* Alinha os itens em coluna (verticalmente) */
-    gap: 20px; /* Espaçamento entre as imagens */
-    align-items: center; /* Opcional: centraliza as imagens horizontalmente */
+    display: flex; /* Flexbox para melhor controle */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Coloca imagens em coluna */
+    gap: 20px;
+    width: 50%; /* Metade do container */
 }
 
 .local-img {
-    width: 50%; /* As imagens ocuparão toda a largura do container */
-    max-width: 500px; /* Define uma largura máxima */
-    height: auto; /* Mantém as proporções das imagens */
-    border-radius: 10px; /* Aplica bordas arredondadas */
-    box-shadow: 0 4px 8px var(--shadow-color); /* Adiciona uma sombra */
+    width: 50%; /* Ocupa toda a largura */
+    max-width: 500px; /* Define um limite máximo */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px var(--shadow-color);
 }
 
+/* Texto */
 .texto-local {
-    text-align: right;
-    width: 50%;
-    margin-left: 100px;
+    text-align: justify; /* Justifica o texto */
+    width: 50%; /* Metade do container */
     font-size: var(--font-size-large);
     line-height: var(--line-height-base);
-    padding: 60px;
+    padding: 40px; /* Ajusta o espaçamento interno */
 }
 
 .texto-local h1 {
@@ -56,24 +59,27 @@
     font-weight: bold;
     color: var(--highlight-color);
     margin-bottom: 20px;
+    text-align: center; /* Centraliza o título */
 }
 
 .texto-local p {
     font-size: var(--font-size-medium);
-    line-height: var(--line-height-base);
+    line-height: 1.8; /* Ajuste no espaçamento */
     margin-bottom: 20px;
 }
 
+/* Botão */
 .botao-maps {
     display: inline-block;
     background-color: var(--button-color);
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 12px 20px;
     font-size: var(--font-size-medium);
     border-radius: 5px;
     transition: background-color 0.3s ease;
     margin-top: 20px;
+    text-align: center; /* Centraliza texto no botão */
 }
 
 .botao-maps:hover {
@@ -83,72 +89,82 @@
 /* Media Queries para Tablets */
 @media (max-width: 768px) {
     .container-local {
-        flex-direction: column; /* Transforma em coluna */
-        align-items: center; /* Centraliza itens */
-        gap: 15px;
+        flex-direction: column; /* Organiza elementos em coluna */
+        align-items: center; /* Centraliza tudo no centro */
+        gap: 20px; /* Ajusta o espaçamento */
+        padding: 20px; /* Espaçamento interno */
     }
 
     .texto-local {
         text-align: center; /* Centraliza o texto */
-        width: 100%; /* O texto ocupa toda a largura */
-        margin: 0; /* Remove margens */
-        order: 1; /* Texto aparece primeiro */
+        width: 90%; /* O texto ocupa quase toda a largura */
+        padding: 20px; /* Ajusta o espaçamento interno */
     }
 
     .local-imagem {
         width: 100%; /* Imagens ocupam toda a largura */
-        order: 2; /* Imagens aparecem depois do texto */
+        margin-top: 20px;
     }
 
     .local-img {
-        max-width: 300px; /* Tamanho menor para tablets */
-    }
-}
-@media (max-width: 480px) {
-    #local-funcionamento {
-        padding: 5px; /* Ajusta o espaçamento interno */
-    }
-    .container-local {
-        flex-direction: column; /* Organiza os elementos em coluna */
-        align-items: stretch; /* Faz os itens ocuparem toda a largura */
-        gap: 15px; /* Espaçamento entre os elementos */
-        padding: 20px; /* Adiciona espaçamento interno */
-    }
-
-    .texto-local {
-        width: 100%; /* Faz o texto ocupar toda a largura da tela */
-        padding: 20px; /* Adiciona espaço interno */
-        font-size: var(--font-size-large); /* Aumenta o tamanho do texto */
-        line-height: 1.8; /* Ajusta o espaçamento entre linhas */
-        margin: 0; /* Remove margens externas */
-        order: 1; /* Texto no topo */
+        width: 80%; /* Reduz o tamanho das imagens */
+        max-width: 400px;
     }
 
     .texto-local h1 {
-        font-size: 32px; /* Tamanho maior do título */
-        margin-bottom: 20px; /* Adiciona um espaçamento abaixo */
+        font-size: 36px; /* Título ajustado para tablets */
+        margin-bottom: 15px;
+    }
+}
+
+/* Media Queries para Celulares */
+@media (max-width: 480px) {
+    #local-funcionamento {
+        padding: 5px;
+    }
+    .container-local {
+        flex-direction: column; /* Alinha os elementos em coluna */
+        align-items: center; /* Centraliza tudo no eixo horizontal */
+        gap: 20px; /* Espaçamento entre texto e imagem */
+        padding: 20px; /* Espaçamento interno */
+    }
+
+    .texto-local {
+        /* Justifica o texto para melhor leitura */
+        width: 100%; /* O texto ocupa toda a largura */
+        font-size: var(--font-size-medium); /* Tamanho do texto adequado */
+        line-height: 1.8; /* Melhor espaçamento entre linhas */
+        padding: 15px; /* Espaçamento interno */
+        order: 1; /* Mantém o texto no topo */
+    }
+
+    .texto-local h1 {
+        font-size: 28px; /* Tamanho ajustado para o título */
+        margin-bottom: 15px; /* Espaço abaixo do título */
+        text-align: center; /* Centraliza o título */
     }
 
     .local-imagem {
-        width: 100%; /* As imagens ocupam toda a largura */
-        order: 2; /* Aparece depois do texto */
+        width: 100%; /* A imagem ocupa toda a largura */
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+        margin-top: 15px; /* Espaçamento entre texto e imagem */
+        order: 2; /* Coloca a imagem abaixo do texto */
     }
 
     .local-img {
-        width: 100%; /* Imagem ocupa toda a largura da tela */
-        max-width: none; /* Remove limite de tamanho */
-        height: auto; /* Mantém proporções da imagem */
-        border-radius: 10px; /* Bordas suaves */
-        box-shadow: 0 4px 8px var(--shadow-color); /* Adiciona uma sombra para destacar */
+        width: 90%; /* Imagem ocupa boa parte da largura da tela */
+        max-width: 300px; /* Define um tamanho máximo para imagens */
+        height: auto; /* Mantém a proporção correta */
+        border-radius: 10px; /* Bordas arredondadas para estética */
+        box-shadow: 0 4px 8px var(--shadow-color); /* Adiciona uma leve sombra */
     }
 
     .botao-maps {
-        font-size: var(
-            --font-size-medium
-        ); /* Tamanho proporcional para o botão */
-        padding: 12px 20px; /* Ajusta o espaçamento interno */
-        margin-top: 20px; /* Espaçamento em relação ao conteúdo acima */
-        width: 100%; /* Botão ocupa boa parte da largura */
+        font-size: var(--font-size-small); /* Ajusta o tamanho da fonte */
+        width: 90%; /* Botão ocupa a maior parte da largura */
+        padding: 10px 15px; /* Espaçamento interno no botão */
         text-align: center; /* Centraliza o texto no botão */
+        margin-top: 20px; /* Espaço entre o botão e os outros elementos */
     }
 }

@@ -27,7 +27,6 @@
 .container-impacto {
     max-width: 800px;
     margin: 0 auto;
-    text-align: justify;
     font-family: Arial, sans-serif;
     color: #333; /* Mantém a cor do texto */
 }

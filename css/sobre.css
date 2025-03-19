@@ -17,7 +17,7 @@
 .container-sobre {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center; /* Centraliza horizontalmente todo o conteúdo */
     flex-direction: row;
     height: auto; /* Permite altura dinâmica */
     min-height: 80vh; /* Define um mínimo para manter a estrutura */
@@ -25,22 +25,29 @@
     background-color: var(--primary-color);
 }
 
+.img-sobre {
+    display: flex; /* Flexbox para centralização */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    width: 50%; /* A div ocupa metade da largura disponível */
+}
+
 .img-sobre img {
     width: 100%; /* Ajuste dinâmico da largura */
     max-width: 700px; /* Limita o tamanho máximo */
     height: auto; /* Mantém proporção */
-    border-radius: 180px;
-    padding: 60px;
+    border-radius: 180px; /* Bordas arredondadas */
+    padding: 60px; /* Espaçamento interno */
     animation: rotateBackAndForth 3s ease-in-out infinite;
+    box-shadow: 0 4px 8px var(--shadow-color); /* Adiciona sombra para destaque */
 }
 
 .test-sobre {
-    text-align: right;
-    width: 50%;
-    margin-left: 400px;
+    text-align: center; /* Centraliza o texto */
+    width: 50%; /* O texto ocupa metade do container */
     font-size: var(--font-size-large);
     line-height: var(--line-height-base);
-    padding: 60px;
+    padding: 40px; /* Espaçamento ajustado */
 }
 
 .test-sobre h1 {
@@ -69,25 +76,25 @@
 /* Ajustes para Tablets */
 @media (max-width: 768px) {
     .container-sobre {
-        flex-direction: column;
+        flex-direction: column; /* Organiza em coluna */
         justify-content: center;
         align-items: center;
-        gap: 20px; /* Reduz o espaço entre elementos */
-        height: auto; /* Ajusta a altura */
-        padding: 20px; /* Reduz o espaçamento */
+        gap: 20px; /* Espaço entre elementos */
+        height: auto; /* Ajusta altura */
+        padding: 20px;
     }
 
     .img-sobre img {
-        width: 80%; /* Ajusta largura para caber melhor na tela */
-        padding: 10px;
+        width: 90%; /* Ajusta largura para caber melhor na tela */
+        padding: 20px; /* Reduz o espaçamento */
         border-radius: 150px; /* Arredondamento menor para encaixar no layout */
     }
 
     .test-sobre {
         text-align: center; /* Centraliza o texto */
-        width: 100%; /* Ocupar toda a largura */
+        width: 90%; /* O texto ocupa quase toda a largura */
         margin: 0; /* Remove margens laterais */
-        padding: 15px; /* Menor espaçamento para ajuste */
+        padding: 15px; /* Ajusta o espaçamento interno */
     }
 
     .test-sobre h1 {
@@ -95,38 +102,45 @@
     }
 
     .test-sobre p {
-        font-size: 18px; /* Texto com tamanho ajustado */
+        font-size: 18px; /* Ajusta o texto */
     }
 }
 
 /* Ajustes para Celulares */
 @media (max-width: 480px) {
-    .container-local {
-        flex-direction: column; /* Organiza os elementos em coluna */
-        align-items: center; /* Centraliza itens */
-        gap: 15px; /* Espaçamento consistente entre os elementos */
+    .container-sobre {
+        flex-direction: column; /* Alinha os elementos verticalmente */
+        justify-content: center;
+        align-items: center;
+        gap: 15px; /* Espaçamento consistente */
+        padding: 10px; /* Ajusta o espaçamento geral */
     }
 
-    .texto-local {
-        text-align: justify; /* Justifica o texto para melhor leitura */
-        width: 90%; /* Expande a largura do texto no celular */
-        padding: 15px; /* Adiciona espaçamento interno */
-        font-size: var(--font-size-large); /* Tamanho do texto aumentado */
-        line-height: 1.8; /* Espaçamento entre linhas melhorado */
+    .img-sobre {
+        width: 100%; /* A div ocupa toda a largura disponível */
+        margin: 0 auto; /* Centraliza a div */
     }
 
-    .texto-local h1 {
-        font-size: 32px; /* Ajuste no tamanho do título */
+    .img-sobre img {
+        width: 100%; /* A imagem ocupa toda a largura do contêiner */
+        max-width: 350px; /* Limita o tamanho máximo */
+        height: auto; /* Mantém a proporção */
+        border-radius: 10px; /* Adiciona bordas suaves */
+        box-shadow: 0 4px 8px var(--shadow-color); /* Sombra leve */
     }
 
-    .local-imagem {
-        width: 100%; /* A imagem ocupa toda a largura disponível */
-        margin-top: 10px; /* Espaçamento superior */
+    .test-sobre {
+        width: 100%; /* O texto ocupa toda a largura */
+        padding: 20px; /* Espaçamento interno ajustado */
+        font-size: var(--font-size-medium); /* Tamanho do texto ajustado */
+        line-height: 1.8; /* Melhor espaçamento entre linhas */
     }
 
-    .local-img {
-        max-width: 300px; /* Define um limite de tamanho para a imagem */
-        width: 80%; /* Proporção adequada para dispositivos menores */
-        height: auto;
+    .test-sobre h1 {
+        font-size: 28px; /* Tamanho ajustado do título para celular */
+    }
+
+    .test-sobre p {
+        font-size: 16px; /* Texto com tamanho proporcional */
     }
 }

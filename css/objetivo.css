@@ -16,27 +16,32 @@
 /* Seção Objetivos */
 #objetivos-projeto {
     background-color: var(--secondary-color);
-    padding: 20px;
+    padding: 40px;
     border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow-color); /* Adiciona sombra ao bloco */
 }
 
 .container-objetivos {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around; /* Espaçamento uniforme */
     gap: 20px;
 }
 
 .objetivos-texto {
-    width: 50%;
-    padding: 80px;
+    width: 50%; /* Ocupa metade do espaço disponível */
+    padding: 40px;
+    font-size: var(--font-size-large); /* Tamanho maior do texto */
+    line-height: var(--line-height-base);
+    text-align: justify; /* Justifica o texto */
 }
 
 .objetivos-texto h1 {
-    font-size: var(--font-size-heading);
+    font-size: var(--font-size-heading); /* Tamanho grande para títulos */
     font-weight: bold;
     color: var(--highlight-color);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o título */
 }
 
 .objetivos-texto ul {
@@ -51,70 +56,82 @@
 }
 
 .objetivos-texto ul li::before {
-    content: "✔️";
+    content: "✔️"; /* Ícone para marcar a lista */
     margin-right: 8px;
     color: var(--button-color);
 }
 
 .objetivos-imagem {
-    width: 40%;
-    text-align: center;
+    width: 40%; /* A imagem ocupa 40% do container */
+    text-align: center; /* Centraliza horizontalmente */
 }
 
 .objetivos-imagem img {
-    width: 80%;
-    height: auto;
-    border-radius: 100px;
+    width: 80%; /* Ocupa boa parte da área disponível */
+    height: auto; /* Mantém proporções */
+    border-radius: 100px; /* Bordas arredondadas */
 }
 
 /* Media Queries para tablets */
 @media (max-width: 768px) {
     .container-objetivos {
-        flex-direction: column; /* Coloca os elementos um embaixo do outro */
+        flex-direction: column; /* Muda para organização vertical */
         align-items: center; /* Centraliza os itens */
+        gap: 20px;
     }
 
     .objetivos-texto {
-        width: 100%; /* Ocupa toda a largura no modo responsivo */
-        padding: 40px; /* Reduz o padding para tablets */
+        width: 90%; /* Expande o texto para ocupar mais espaço */
+        padding: 30px;
         text-align: center; /* Centraliza o texto */
     }
 
     .objetivos-imagem {
-        width: 100%; /* Ajusta a largura da imagem */
+        width: 100%; /* Ajusta largura do container da imagem */
+        margin-top: 20px;
     }
 
     .objetivos-imagem img {
-        width: 70%; /* Reduz o tamanho da imagem em tablets */
+        width: 80%; /* Ajusta tamanho da imagem para tablets */
     }
 
     .objetivos-texto h1 {
-        font-size: calc(
-            var(--font-size-heading) - 10px
-        ); /* Reduz tamanho do título */
+        font-size: calc(var(--font-size-heading) - 10px); /* Reduz tamanho */
     }
 }
 
 /* Media Queries para celulares */
 @media (max-width: 480px) {
-    .objetivos-texto {
-        font-size: var(--font-size-medium);
-        padding: 20px; /* Reduz o padding ainda mais para dispositivos menores */
+    .container-objetivos {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px;
     }
 
-    .objetivos-imagem img {
-        width: 80%; /* Ajusta a largura da imagem para caber melhor */
+    .objetivos-texto {
+        width: 100%; /* Ocupa toda a largura disponível */
+        padding: 20px; /* Reduz o preenchimento interno */
+        font-size: var(--font-size-medium);
+        line-height: 1.8; /* Melhora o espaçamento entre linhas */
     }
 
     .objetivos-texto h1 {
-        font-size: calc(
-            var(--font-size-heading) - 15px
-        ); /* Texto menor para celulares */
+        font-size: calc(var(--font-size-heading) - 15px); /* Ajusta tamanho */
+        margin-bottom: 15px;
     }
 
     .objetivos-texto ul li {
-        font-size: var(
-            --font-size-small
-        ); /* Ajusta o tamanho do texto das listas */
+        font-size: var(--font-size-small); /* Texto menor para listas */
+    }
+
+    .objetivos-imagem {
+        width: 100%; /* A imagem ocupa toda a largura disponível */
+        margin-top: 20px;
+    }
+
+    .objetivos-imagem img {
+        width: 90%; /* Usa boa parte da tela */
+        max-width: 300px; /* Limita o tamanho máximo */
     }
 }

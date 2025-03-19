@@ -65,10 +65,10 @@
 @media screen and (max-width: 480px) {
     /* Para celulares */
     .carousel-inner img {
-        height: 400px; /* Altura reduzida */
+        height: 600px; /* Altura reduzida */
     }
     .carousel {
-        padding: 10px;
+        padding: 20px;
         margin: 0; /* Remove margens */
     }
 }
