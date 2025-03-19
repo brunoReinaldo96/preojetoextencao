@@ -51,3 +51,24 @@
 .carousel-control-next:hover {
     transform: scale(1.2); /* Ampliado */
 }
+
+@media screen and (max-width: 768px) {
+    /* Para tablets */
+    .carousel-inner img {
+        height: 600px; /* Reduz a altura */
+    }
+    .carousel {
+        padding: 20px; /* Ajusta o espaçamento */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Para celulares */
+    .carousel-inner img {
+        height: 400px; /* Altura reduzida */
+    }
+    .carousel {
+        padding: 10px;
+        margin: 0; /* Remove margens */
+    }
+}
