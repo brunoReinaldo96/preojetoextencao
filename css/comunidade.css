@@ -43,6 +43,7 @@
     font-size: var(--font-size-medium);
     line-height: var(--line-height-base);
     margin-bottom: 20px;
+    text-align: center;
 }
 /* Estilo para Tablets */
 @media (max-width: 768px) {

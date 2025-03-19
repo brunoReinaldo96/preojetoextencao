@@ -34,7 +34,7 @@
     align-items: center; /* Centraliza verticalmente */
     flex-direction: column; /* Coloca imagens em coluna */
     gap: 20px;
-    width: 50%; /* Metade do container */
+    width: 70%; /* Metade do container */
 }
 
 .local-img {
