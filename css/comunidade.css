@@ -44,3 +44,49 @@
     line-height: var(--line-height-base);
     margin-bottom: 20px;
 }
+/* Estilo para Tablets */
+@media (max-width: 768px) {
+    #impacto-comunidade {
+        padding: 30px; /* Reduz o espaçamento interno para tablets */
+    }
+
+    .container-impacto {
+        max-width: 100%; /* Expande para ocupar toda a largura */
+        padding: 20px; /* Adiciona espaçamento interno */
+    }
+
+    .container-impacto h1 {
+        font-size: 40px; /* Reduz o tamanho do título */
+        margin-bottom: 15px; /* Ajusta o espaçamento abaixo do título */
+    }
+
+    .container-impacto p {
+        font-size: 16px; /* Texto um pouco menor */
+        line-height: 1.8; /* Melhora a legibilidade */
+    }
+}
+
+/* Estilo para Celulares */
+@media (max-width: 480px) {
+    #impacto-comunidade {
+        padding: 20px; /* Reduz ainda mais o espaçamento interno */
+        background-size: cover; /* Ajusta a imagem de fundo para cobrir */
+    }
+
+    .container-impacto {
+        max-width: 100%; /* O texto ocupa toda a largura */
+        padding: 15px; /* Espaçamento menor */
+    }
+
+    .container-impacto h1 {
+        font-size: 28px; /* Reduz o tamanho do título para telas pequenas */
+        margin-bottom: 10px; /* Reduz o espaçamento */
+        text-align: center; /* Centraliza o título */
+    }
+
+    .container-impacto p {
+        font-size: 14px; /* Ajusta o tamanho do texto */
+        line-height: 1.6; /* Mantém espaçamento confortável */
+        text-align: center;
+    }
+}

@@ -45,7 +45,7 @@
 .test-sobre {
     text-align: center; /* Centraliza o texto */
     width: 50%; /* O texto ocupa metade do container */
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-medium);
     line-height: var(--line-height-base);
     padding: 40px; /* Espaçamento ajustado */
 }

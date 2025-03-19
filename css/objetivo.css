@@ -31,7 +31,7 @@
 .objetivos-texto {
     width: 50%; /* Ocupa metade do espaço disponível */
     padding: 40px;
-    font-size: var(--font-size-large); /* Tamanho maior do texto */
+    font-size: var(--font-size-medium); /* Tamanho maior do texto */
     line-height: var(--line-height-base);
     text-align: justify; /* Justifica o texto */
 }

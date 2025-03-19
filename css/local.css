@@ -49,7 +49,7 @@
 .texto-local {
     text-align: justify; /* Justifica o texto */
     width: 50%; /* Metade do container */
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-medium);
     line-height: var(--line-height-base);
     padding: 40px; /* Ajusta o espaçamento interno */
 }
@@ -132,7 +132,7 @@
     .texto-local {
         /* Justifica o texto para melhor leitura */
         width: 100%; /* O texto ocupa toda a largura */
-        font-size: var(--font-size-medium); /* Tamanho do texto adequado */
+
         line-height: 1.8; /* Melhor espaçamento entre linhas */
         padding: 15px; /* Espaçamento interno */
         order: 1; /* Mantém o texto no topo */
@@ -142,6 +142,9 @@
         font-size: 28px; /* Tamanho ajustado para o título */
         margin-bottom: 15px; /* Espaço abaixo do título */
         text-align: center; /* Centraliza o título */
+    }
+    .texto-local p {
+        font-size: var(--font-size-small); /* Tamanho do texto ajustado */
     }
 
     .local-imagem {
