@@ -5,53 +5,50 @@
     --font-size-title: 32px;
     --font-size-heading: 50px;
     --line-height-base: 1.6;
-    --primary-color: #e7dbf5; /* Cor de fundo padrão */
-    --secondary-color: #f2f2f2; /* Cor de fundo para blocos específicos */
-    --highlight-color: rgb(98, 12, 191); /* Cor de destaque */
-    --button-color: #4caf50; /* Cor do botão */
-    --button-hover: #45a049; /* Cor ao passar o mouse */
-    --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra */
+    --primary-color: #e7dbf5;
+    --secondary-color: #f2f2f2;
+    --highlight-color: rgb(98, 12, 191);
+    --button-color: #4caf50;
+    --button-hover: #45a049;
+    --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Seção Local de Funcionamento */
 #local-funcionamento {
     background-color: var(--primary-color);
     padding: 40px;
 }
 
 .container-local {
-    display: flex; /* Organiza os elementos em uma linha horizontal */
-    flex-direction: row; /* Alinha as imagens e o texto lado a lado */
-    align-items: center; /* Centraliza verticalmente os itens */
-    justify-content: space-between; /* Distribui o espaço uniformemente */
-    gap: 20px; /* Espaçamento entre imagens e texto */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-/* Imagens */
 .local-imagem {
-    display: flex; /* Flexbox para melhor controle */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    flex-direction: column; /* Coloca imagens em coluna */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     gap: 20px;
-    width: 70%; /* Metade do container */
+    width: 70%;
 }
 
 .local-img {
-    width: 50%; /* Ocupa toda a largura */
-    max-width: 500px; /* Define um limite máximo */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 10px; /* Bordas arredondadas */
+    width: 50%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
     box-shadow: 0 4px 8px var(--shadow-color);
 }
 
-/* Texto */
 .texto-local {
-    text-align: justify; /* Justifica o texto */
-    width: 50%; /* Metade do container */
+    text-align: justify;
+    width: 50%;
     font-size: var(--font-size-medium);
     line-height: var(--line-height-base);
-    padding: 40px; /* Ajusta o espaçamento interno */
+    padding: 40px;
 }
 
 .texto-local h1 {
@@ -59,21 +56,20 @@
     font-weight: bold;
     color: var(--highlight-color);
     margin-bottom: 20px;
-    text-align: center; /* Centraliza o título */
+    text-align: center;
 }
 
 .texto-local p {
     font-size: var(--font-size-medium);
-    line-height: 1.8; /* Ajuste no espaçamento */
+    line-height: 1.8;
     margin-bottom: 20px;
     text-align: center;
 }
 
-/* Botão */
 .botao-maps {
-    display: block; /* Faz com que o botão ocupe toda a largura disponível */
-    margin: 20px auto; /* Centraliza horizontalmente e mantém margem superior */
-    background-color: var(--button-color); /* Cor personalizada */
+    display: block;
+    margin: 20px auto;
+    background-color: var(--button-color);
     color: white;
     text-decoration: none;
     padding: 12px 20px;
@@ -87,88 +83,84 @@
     background-color: var(--button-hover);
 }
 
-/* Media Queries para Tablets */
 @media (max-width: 768px) {
     .container-local {
-        flex-direction: column; /* Organiza elementos em coluna */
-        align-items: center; /* Centraliza tudo no centro */
-        gap: 20px; /* Ajusta o espaçamento */
-        padding: 20px; /* Espaçamento interno */
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
     }
 
     .texto-local {
-        text-align: center; /* Centraliza o texto */
-        width: 90%; /* O texto ocupa quase toda a largura */
-        padding: 20px; /* Ajusta o espaçamento interno */
+        text-align: center;
+        width: 90%;
+        padding: 20px;
     }
 
     .local-imagem {
-        width: 100%; /* Imagens ocupam toda a largura */
+        width: 100%;
         margin-top: 20px;
     }
 
     .local-img {
-        width: 80%; /* Reduz o tamanho das imagens */
+        width: 80%;
         max-width: 400px;
     }
 
     .texto-local h1 {
-        font-size: 36px; /* Título ajustado para tablets */
+        font-size: 36px;
         margin-bottom: 15px;
     }
 }
 
-/* Media Queries para Celulares */
 @media (max-width: 480px) {
     #local-funcionamento {
         padding: 5px;
     }
     .container-local {
-        flex-direction: column; /* Alinha os elementos em coluna */
-        align-items: center; /* Centraliza tudo no eixo horizontal */
-        gap: 20px; /* Espaçamento entre texto e imagem */
-        padding: 20px; /* Espaçamento interno */
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
     }
 
     .texto-local {
-        /* Justifica o texto para melhor leitura */
-        width: 100%; /* O texto ocupa toda a largura */
-
-        line-height: 1.8; /* Melhor espaçamento entre linhas */
-        padding: 15px; /* Espaçamento interno */
-        order: 1; /* Mantém o texto no topo */
+        width: 100%;
+        line-height: 1.8;
+        padding: 15px;
+        order: 1;
     }
 
     .texto-local h1 {
-        font-size: 28px; /* Tamanho ajustado para o título */
-        margin-bottom: 15px; /* Espaço abaixo do título */
-        text-align: center; /* Centraliza o título */
+        font-size: 28px;
+        margin-bottom: 15px;
+        text-align: center;
     }
     .texto-local p {
-        font-size: var(--font-size-small); /* Tamanho do texto ajustado */
+        font-size: var(--font-size-small);
     }
 
     .local-imagem {
-        width: 100%; /* A imagem ocupa toda a largura */
+        width: 100%;
         display: flex;
-        justify-content: center; /* Centraliza horizontalmente */
-        margin-top: 15px; /* Espaçamento entre texto e imagem */
-        order: 2; /* Coloca a imagem abaixo do texto */
+        justify-content: center;
+        margin-top: 15px;
+        order: 2;
     }
 
     .local-img {
-        width: 90%; /* Imagem ocupa boa parte da largura da tela */
-        max-width: 300px; /* Define um tamanho máximo para imagens */
-        height: auto; /* Mantém a proporção correta */
-        border-radius: 10px; /* Bordas arredondadas para estética */
-        box-shadow: 0 4px 8px var(--shadow-color); /* Adiciona uma leve sombra */
+        width: 90%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px var(--shadow-color);
     }
 
     .botao-maps {
-        font-size: var(--font-size-small); /* Ajusta o tamanho da fonte */
-        width: 90%; /* Botão ocupa a maior parte da largura */
-        padding: 10px 15px; /* Espaçamento interno no botão */
-        text-align: center; /* Centraliza o texto no botão */
-        margin-top: 20px; /* Espaço entre o botão e os outros elementos */
+        font-size: var(--font-size-small);
+        width: 90%;
+        padding: 10px 15px;
+        text-align: center;
+        margin-top: 20px;
     }
 }

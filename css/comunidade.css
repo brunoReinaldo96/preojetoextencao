@@ -5,16 +5,16 @@
     --font-size-title: 32px;
     --font-size-heading: 50px;
     --line-height-base: 1.6;
-    --primary-color: #e7dbf5; /* Cor de fundo padrão */
-    --secondary-color: #f2f2f2; /* Cor de fundo para blocos específicos */
-    --highlight-color: rgb(98, 12, 191); /* Cor de destaque */
-    --button-color: #4caf50; /* Cor do botão */
-    --button-hover: #45a049; /* Cor ao passar o mouse */
-    --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra */
+    --primary-color: #e7dbf5;
+    --secondary-color: #f2f2f2;
+    --highlight-color: rgb(98, 12, 191);
+    --button-color: #4caf50;
+    --button-hover: #45a049;
+    --shadow-color: rgba(0, 0, 0, 0.1);
 }
 #impacto-comunidade {
     background-color: var(--primary-color);
-    background-image: url("img/"); /* Adicione o caminho para a imagem */
+    background-image: url("img/");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -28,7 +28,7 @@
     max-width: 800px;
     margin: 0 auto;
     font-family: Arial, sans-serif;
-    color: #333; /* Mantém a cor do texto */
+    color: #333;
 }
 
 .container-impacto h1 {
@@ -45,49 +45,48 @@
     margin-bottom: 20px;
     text-align: center;
 }
-/* Estilo para Tablets */
+
 @media (max-width: 768px) {
     #impacto-comunidade {
-        padding: 30px; /* Reduz o espaçamento interno para tablets */
+        padding: 30px;
     }
 
     .container-impacto {
-        max-width: 100%; /* Expande para ocupar toda a largura */
-        padding: 20px; /* Adiciona espaçamento interno */
+        max-width: 100%;
+        padding: 20px;
     }
 
     .container-impacto h1 {
-        font-size: 40px; /* Reduz o tamanho do título */
-        margin-bottom: 15px; /* Ajusta o espaçamento abaixo do título */
+        font-size: 40px;
+        margin-bottom: 15px;
     }
 
     .container-impacto p {
-        font-size: 16px; /* Texto um pouco menor */
-        line-height: 1.8; /* Melhora a legibilidade */
+        font-size: 16px;
+        line-height: 1.8;
     }
 }
 
-/* Estilo para Celulares */
 @media (max-width: 480px) {
     #impacto-comunidade {
-        padding: 20px; /* Reduz ainda mais o espaçamento interno */
-        background-size: cover; /* Ajusta a imagem de fundo para cobrir */
+        padding: 20px;
+        background-size: cover;
     }
 
     .container-impacto {
-        max-width: 100%; /* O texto ocupa toda a largura */
-        padding: 15px; /* Espaçamento menor */
+        max-width: 100%;
+        padding: 15px;
     }
 
     .container-impacto h1 {
-        font-size: 28px; /* Reduz o tamanho do título para telas pequenas */
-        margin-bottom: 10px; /* Reduz o espaçamento */
-        text-align: center; /* Centraliza o título */
+        font-size: 28px;
+        margin-bottom: 10px;
+        text-align: center;
     }
 
     .container-impacto p {
-        font-size: 14px; /* Ajusta o tamanho do texto */
-        line-height: 1.6; /* Mantém espaçamento confortável */
+        font-size: 14px;
+        line-height: 1.6;
         text-align: center;
     }
 }

@@ -5,12 +5,12 @@
     --font-size-title: 32px;
     --font-size-heading: 50px;
     --line-height-base: 1.6;
-    --primary-color: #e7dbf5; /* Cor de fundo padrão */
-    --secondary-color: #f2f2f2; /* Cor de fundo para blocos específicos */
-    --highlight-color: rgb(98, 12, 191); /* Cor de destaque */
-    --button-color: #4caf50; /* Cor do botão */
-    --button-hover: #45a049; /* Cor ao passar o mouse */
-    --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra */
+    --primary-color: #e7dbf5;
+    --secondary-color: #f2f2f2;
+    --highlight-color: rgb(98, 12, 191);
+    --button-color: #4caf50;
+    --button-hover: #45a049;
+    --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Seção Objetivos */
@@ -18,30 +18,29 @@
     background-color: var(--secondary-color);
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px var(--shadow-color); /* Adiciona sombra ao bloco */
+    box-shadow: 0 4px 8px var(--shadow-color);
 }
 
 .container-objetivos {
     display: flex;
     align-items: center;
-    justify-content: space-around; /* Espaçamento uniforme */
-    gap: 20px;
+    justify-content: space-around;
 }
 
 .objetivos-texto {
-    width: 50%; /* Ocupa metade do espaço disponível */
+    width: 50%;
     padding: 40px;
-    font-size: var(--font-size-medium); /* Tamanho maior do texto */
+    font-size: var(--font-size-medium);
     line-height: var(--line-height-base);
-    text-align: justify; /* Justifica o texto */
+    text-align: justify;
 }
 
 .objetivos-texto h1 {
-    font-size: var(--font-size-heading); /* Tamanho grande para títulos */
+    font-size: var(--font-size-heading);
     font-weight: bold;
     color: var(--highlight-color);
     margin-bottom: 20px;
-    text-align: center; /* Centraliza o título */
+    text-align: center;
 }
 
 .objetivos-texto ul {
@@ -56,51 +55,49 @@
 }
 
 .objetivos-texto ul li::before {
-    content: "✔️"; /* Ícone para marcar a lista */
+    content: "✔️";
     margin-right: 8px;
     color: var(--button-color);
 }
 
 .objetivos-imagem {
-    width: 40%; /* A imagem ocupa 40% do container */
-    text-align: center; /* Centraliza horizontalmente */
+    width: 40%;
+    text-align: center;
 }
 
 .objetivos-imagem img {
-    width: 80%; /* Ocupa boa parte da área disponível */
-    height: auto; /* Mantém proporções */
-    border-radius: 100px; /* Bordas arredondadas */
+    width: 80%;
+    height: auto;
+    border-radius: 100px;
 }
 
-/* Media Queries para tablets */
 @media (max-width: 768px) {
     .container-objetivos {
-        flex-direction: column; /* Muda para organização vertical */
-        align-items: center; /* Centraliza os itens */
+        flex-direction: column;
+        align-items: center;
         gap: 20px;
     }
 
     .objetivos-texto {
-        width: 90%; /* Expande o texto para ocupar mais espaço */
+        width: 90%;
         padding: 30px;
-        text-align: center; /* Centraliza o texto */
+        text-align: center;
     }
 
     .objetivos-imagem {
-        width: 100%; /* Ajusta largura do container da imagem */
+        width: 100%;
         margin-top: 20px;
     }
 
     .objetivos-imagem img {
-        width: 80%; /* Ajusta tamanho da imagem para tablets */
+        width: 80%;
     }
 
     .objetivos-texto h1 {
-        font-size: calc(var(--font-size-heading) - 10px); /* Reduz tamanho */
+        font-size: calc(var(--font-size-heading) - 10px);
     }
 }
 
-/* Media Queries para celulares */
 @media (max-width: 480px) {
     .container-objetivos {
         flex-direction: column;
@@ -110,28 +107,28 @@
     }
 
     .objetivos-texto {
-        width: 100%; /* Ocupa toda a largura disponível */
-        padding: 20px; /* Reduz o preenchimento interno */
+        width: 100%;
+        padding: 20px;
         font-size: var(--font-size-medium);
-        line-height: 1.8; /* Melhora o espaçamento entre linhas */
+        line-height: 1.8;
     }
 
     .objetivos-texto h1 {
-        font-size: calc(var(--font-size-heading) - 15px); /* Ajusta tamanho */
+        font-size: calc(var(--font-size-heading) - 15px);
         margin-bottom: 15px;
     }
 
     .objetivos-texto ul li {
-        font-size: var(--font-size-small); /* Texto menor para listas */
+        font-size: var(--font-size-small);
     }
 
     .objetivos-imagem {
-        width: 100%; /* A imagem ocupa toda a largura disponível */
+        width: 100%;
         margin-top: 20px;
     }
 
     .objetivos-imagem img {
-        width: 90%; /* Usa boa parte da tela */
-        max-width: 300px; /* Limita o tamanho máximo */
+        width: 90%;
+        max-width: 300px;
     }
 }

@@ -5,12 +5,12 @@
     --font-size-title: 32px;
     --font-size-heading: 50px;
     --line-height-base: 1.6;
-    --primary-color: #e7dbf5; /* Cor de fundo padrão */
-    --secondary-color: #f2f2f2; /* Cor de fundo para blocos específicos */
-    --highlight-color: rgb(98, 12, 191); /* Cor de destaque */
-    --button-color: #4caf50; /* Cor do botão */
-    --button-hover: #45a049; /* Cor ao passar o mouse */
-    --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra */
+    --primary-color: #e7dbf5;
+    --secondary-color: #f2f2f2;
+    --highlight-color: rgb(98, 12, 191);
+    --button-color: #4caf50;
+    --button-hover: #45a049;
+    --shadow-color: rgba(0, 0, 0, 0.1);
 }
 /* Navbar */
 .navbar-brand img {
@@ -25,10 +25,9 @@
     width: 100%;
     z-index: 1000;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    transition: transform var(--transition-duration) ease; /* Transição suave */
+    transition: transform var(--transition-duration) ease;
 }
 
-/* Navegação personalizada */
 .navbar-nav {
     margin-left: unset;
 }

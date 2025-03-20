@@ -5,15 +5,14 @@
     --font-size-title: 32px;
     --font-size-heading: 50px;
     --line-height-base: 1.6;
-    --primary-color: #e7dbf5; /* Cor de fundo padrão */
-    --secondary-color: #f2f2f2; /* Cor de fundo para blocos específicos */
-    --highlight-color: rgb(98, 12, 191); /* Cor de destaque */
-    --button-color: #4caf50; /* Cor do botão */
-    --button-hover: #45a049; /* Cor ao passar o mouse */
-    --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra */
+    --primary-color: #e7dbf5;
+    --secondary-color: #f2f2f2;
+    --highlight-color: rgb(98, 12, 191);
+    --button-color: #4caf50;
+    --button-hover: #45a049;
+    --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Seção Horários */
 #card-horario {
     padding: 2000px;
     border-radius: 10px;
@@ -22,15 +21,15 @@
 #card-horario h1 {
     font-size: var(--font-size-heading);
     font-weight: bold;
-    color: var(--highlight-color); /* Título em cor de destaque */
+    color: var(--highlight-color);
     text-align: center;
     margin-bottom: 20px;
 }
 
 .card {
-    background-color: var(--primary-color); /* Fundo dos cards */
+    background-color: var(--primary-color);
     border-radius: 10px;
-    box-shadow: 0 4px 8px var(--shadow-color); /* Sombra para os cards */
+    box-shadow: 0 4px 8px var(--shadow-color);
     overflow: hidden;
     margin-left: 20px;
     margin-bottom: 20px;
@@ -39,16 +38,16 @@
 
 .card-img-top,
 .custom-rounded {
-    width: 100%; /* Mantém a largura responsiva */
-    height: auto; /* Ajusta a altura */
-    padding: 20px; /* Espaçamento ao redor da imagem */
-    border-radius: 30px; /* Bordas arredondadas */
-    object-fit: cover; /* Ajusta o conteúdo */
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border-radius: 30px;
+    object-fit: cover;
 }
 
 .rounded-container {
-    border-radius: 30px; /* Arredonda as bordas */
-    overflow: hidden; /* Esconde partes extras fora do contêiner */
+    border-radius: 30px;
+    overflow: hidden;
 }
 
 .card-title {
@@ -61,32 +60,31 @@
 .card-body p {
     font-size: var(--font-size-medium);
     line-height: var(--line-height-base);
-    text-align: left; /* Texto alinhado */
+    text-align: left;
     color: #333;
 }
 
 .card-text {
-    text-align: center; /* Centraliza o texto */
-    font-size: 24px; /* Aumenta o tamanho da fonte */
-    font-weight: bold; /* Deixa o texto em negrito */
-    color: var(--highlight-color); /* Adiciona a cor de destaque */
-    background-color: rgba(98, 12, 191, 0.1); /* Fundo com leve transparência */
-    padding: 20px; /* Espaçamento interno */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
-    margin: 20px auto; /* Centraliza o elemento no contêiner pai */
-    width: fit-content; /* Adapta a largura ao conteúdo */
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--highlight-color);
+    background-color: rgba(98, 12, 191, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: fit-content;
 }
 
-/* Lightbox */
 .lightbox {
-    display: none; /* Escondido por padrão */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Fundo escuro semitransparente */
+    background: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -95,27 +93,27 @@
 .lightbox img {
     max-width: 90%;
     max-height: 90%;
-    border-radius: 10px; /* Bordas arredondadas para a imagem no lightbox */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .lightbox.active {
-    display: flex; /* Mostra o lightbox */
+    display: flex;
 }
 
 .clickable-img {
-    cursor: pointer; /* Indica que a imagem é clicável */
-    transition: transform 0.3s ease; /* Animação suave */
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .clickable-img:hover {
-    transform: scale(1.05); /* Efeito ao passar o mouse */
+    transform: scale(1.05);
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     #card-horario .row {
-        flex-direction: column; /* Empilha os cards verticalmente */
+        flex-direction: column;
     }
 
     .card {
@@ -123,21 +121,17 @@
     }
 
     .card-title {
-        font-size: calc(
-            var(--font-size-title) - 4px
-        ); /* Reduz o tamanho do título */
+        font-size: calc(var(--font-size-title) - 4px);
     }
 
     .card-body p {
-        font-size: calc(
-            var(--font-size-medium) - 2px
-        ); /* Ajusta o tamanho do texto */
+        font-size: calc(var(--font-size-medium) - 2px);
     }
 }
 
 @media (max-width: 480px) {
     #card-horario h1 {
-        font-size: calc(var(--font-size-heading) - 10px); /* Título menor */
+        font-size: calc(var(--font-size-heading) - 10px);
     }
 
     .card-title {
@@ -145,8 +139,6 @@
     }
 
     .card-body p {
-        font-size: var(
-            --font-size-small
-        ); /* Ajusta o texto para dispositivos menores */
+        font-size: var(--font-size-small);
     }
 }
