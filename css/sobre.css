@@ -113,7 +113,7 @@
         justify-content: center;
         align-items: center;
         gap: 15px; /* Espaçamento consistente */
-        padding: 10px; /* Ajusta o espaçamento geral */
+        padding: 100px; /* Ajusta o espaçamento geral */
     }
 
     .img-sobre {
@@ -123,9 +123,9 @@
 
     .img-sobre img {
         width: 100%; /* A imagem ocupa toda a largura do contêiner */
-        max-width: 350px; /* Limita o tamanho máximo */
+        max-width: 300px; /* Limita o tamanho máximo */
         height: auto; /* Mantém a proporção */
-        border-radius: 10px; /* Adiciona bordas suaves */
+        border-radius: 50px; /* Adiciona bordas suaves */
         box-shadow: 0 4px 8px var(--shadow-color); /* Sombra leve */
     }
 
