@@ -66,20 +66,21 @@
     font-size: var(--font-size-medium);
     line-height: 1.8; /* Ajuste no espaçamento */
     margin-bottom: 20px;
+    text-align: center;
 }
 
 /* Botão */
 .botao-maps {
-    display: inline-block;
-    background-color: var(--button-color);
+    display: block; /* Faz com que o botão ocupe toda a largura disponível */
+    margin: 20px auto; /* Centraliza horizontalmente e mantém margem superior */
+    background-color: var(--button-color); /* Cor personalizada */
     color: white;
     text-decoration: none;
     padding: 12px 20px;
     font-size: var(--font-size-medium);
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    margin-top: 20px;
-    text-align: center; /* Centraliza texto no botão */
+    text-align: center;
 }
 
 .botao-maps:hover {
