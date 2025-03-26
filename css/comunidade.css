@@ -1,0 +1,92 @@
+:root {
+    --font-size-small: 14px;
+    --font-size-medium: 18px;
+    --font-size-large: 24px;
+    --font-size-title: 32px;
+    --font-size-heading: 50px;
+    --line-height-base: 1.6;
+    --primary-color: #e7dbf5;
+    --secondary-color: #f2f2f2;
+    --highlight-color: rgb(98, 12, 191);
+    --button-color: #4caf50;
+    --button-hover: #45a049;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+#impacto-comunidade {
+    background-color: var(--primary-color);
+    background-image: url("img/");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 1;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.container-impacto {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.container-impacto h1 {
+    font-size: var(--font-size-heading);
+    font-weight: bold;
+    color: var(--highlight-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container-impacto p {
+    font-size: var(--font-size-medium);
+    line-height: var(--line-height-base);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    #impacto-comunidade {
+        padding: 30px;
+    }
+
+    .container-impacto {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .container-impacto h1 {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+
+    .container-impacto p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+}
+
+@media (max-width: 480px) {
+    #impacto-comunidade {
+        padding: 20px;
+        background-size: cover;
+    }
+
+    .container-impacto {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .container-impacto h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .container-impacto p {
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: center;
+    }
+}

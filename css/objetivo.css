@@ -1,0 +1,134 @@
+:root {
+    --font-size-small: 14px;
+    --font-size-medium: 20px;
+    --font-size-large: 24px;
+    --font-size-title: 32px;
+    --font-size-heading: 50px;
+    --line-height-base: 1.6;
+    --primary-color: #e7dbf5;
+    --secondary-color: #f2f2f2;
+    --highlight-color: rgb(98, 12, 191);
+    --button-color: #4caf50;
+    --button-hover: #45a049;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Seção Objetivos */
+#objetivos-projeto {
+    background-color: var(--secondary-color);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.container-objetivos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.objetivos-texto {
+    width: 50%;
+    padding: 40px;
+    font-size: var(--font-size-medium);
+    line-height: var(--line-height-base);
+    text-align: justify;
+}
+
+.objetivos-texto h1 {
+    font-size: var(--font-size-heading);
+    font-weight: bold;
+    color: var(--highlight-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.objetivos-texto ul {
+    list-style: none;
+    padding: 0;
+}
+
+.objetivos-texto ul li {
+    font-size: var(--font-size-medium);
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.objetivos-texto ul li::before {
+    content: "✔️";
+    margin-right: 8px;
+    color: var(--button-color);
+}
+
+.objetivos-imagem {
+    width: 40%;
+    text-align: center;
+}
+
+.objetivos-imagem img {
+    width: 80%;
+    height: auto;
+    border-radius: 100px;
+}
+
+@media (max-width: 768px) {
+    .container-objetivos {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .objetivos-texto {
+        width: 90%;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .objetivos-imagem {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .objetivos-imagem img {
+        width: 80%;
+    }
+
+    .objetivos-texto h1 {
+        font-size: calc(var(--font-size-heading) - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .container-objetivos {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .objetivos-texto {
+        width: 100%;
+        padding: 20px;
+        font-size: var(--font-size-medium);
+        line-height: 1.8;
+    }
+
+    .objetivos-texto h1 {
+        font-size: calc(var(--font-size-heading) - 15px);
+        margin-bottom: 15px;
+    }
+
+    .objetivos-texto ul li {
+        font-size: var(--font-size-small);
+    }
+
+    .objetivos-imagem {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .objetivos-imagem img {
+        width: 90%;
+        max-width: 300px;
+    }
+}
